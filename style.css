@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color:#9A54D6;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: padding 0.3s ease;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+nav ul li {
+    margin-left: 0.2rem;
+    margin: 0 1rem;
+    margin-top: 2rem;
+
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    transition: color 0.3s ease;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.section {
+    width: 100%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin:auto; 
+  
+  
+}
+.section .left{
+ margin-top: 2rem;
+
+}
+
+.left h1{
+    font-size:3.5rem;
+    font-weight: 900;
+    padding-left: 6rem;
+    line-height: 4rem;
+}
+
+.left p{
+    font-size: 1rem;
+    font-weight: 700 ;
+    padding-left: 6rem;
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.left button{
+  
+  
+    border: 2px solid #FFFFFF;
+ 
+    font-weight: 700;
+    margin-right: 1rem ;
+    font-size: 1.2rem;
+}
+.search-btn:hover{
+    background:#9A54D6;
+    color:white;
+    font-size: 1.3rem;
+}
+
+.search-btn{
+    background:white;
+    color:#9A54D6;
+    margin-right: 1.5rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin-left: 17rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+.join-btn:hover{
+    background: white;
+    color:#9A54D6;
+    font-size: 1.3rem;
+
+}
+
+.join-btn{
+    background:#9A54D6;
+    color:white;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    border-radius: 13px;
+}
+
+.Box{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 55%;
+    border: 2px solid white;
+    margin-top: 2rem;
+    margin-left: 4.5rem ;
+    overflow: hidden;
+}
+
+
+#silder{
+ 
+  height:38rem;
+  position: relative;
+  margin: auto; 
+  max-width: 37.5rem;
+   overflow: hidden;
+}
+
+#slides{
+ 
+    display: flex;
+    flex-direction: column;
+    height: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img{
+ 
+    width:38.4375rem;
+    height:38.4375rem ;
+    display: block;
+    margin-right: 3rem;
+}
+
+.slide{
+    width:100%;
+    height:100% ;
+    flex: 1;
+} 
+
+
+input{
+    display: none;
+}
+
+#controls{
+    
+    position: absolute;
+    left: 85%;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    transform: translateY(-50%);
+}
+
+#controls label{
+    width:0.625rem ;
+    height:0.625rem;
+    border-radius: 50%;
+    background-color:blueviolet;
+    cursor: pointer;
+}
+
+
+#slide1:checked ~ #slides{
+    transform: translateY(0);
+}
+#slide2:checked ~ #slides{
+    transform: translateY(-25%);
+}
+#slide3:checked ~ #slides{
+    transform: translateY(-50%);
+}
+#slide4:checked ~ #slides{
+    transform: translateY(-75%);
+}
+
+#slide1:checked ~ #controls label[for="slide1"],
+#slide1:checked ~ #controls label[for="slide2"],
+#slide1:checked ~ #controls label[for="slide3"],
+#slide1:checked ~ #controls label[for="slide4"]{
+    background-color: aqua;
+    transform: scale(1.8);
+}
+
+footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    justify-content: space-between;
+  }
+
+  footer .para{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5rem;
+  }
+
+  .p1{
+    padding-right: 3rem;
+  }
+
+  .p2{
+    padding-right: 3rem;
+  }
+
+  .p3{
+    padding-right: 3rem;
+  }
+
+
+
+  footer span{
+    margin-left: 6.6rem;
+  }
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+        /* FontAwesome X icon */
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background:rgb(104, 36, 167);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 20px 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    #click:checked~ul li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: 0;
+        display: block;
+        font-size: 20px;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: cyan;
+    }
+    
+  
+}
+
